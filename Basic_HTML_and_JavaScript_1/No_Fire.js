@@ -1,0 +1,1 @@
+alert("Put Out The Fire!!!");
