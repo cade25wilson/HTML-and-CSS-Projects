@@ -4,6 +4,7 @@
 		<title>American Cars</title>
 		<meta charset="utf-8">	
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="./JS/onepage.js"></script>
 	</head>
 	<body>
 	
@@ -18,58 +19,74 @@
 		<!--END HOME-->
 		
 		<!--GALLERY-->
-		<section>
-			<div id="gallery">
-				<h1>Gallery</h1>
-				<div>
-					<div>
-						<!--PHOTO_CONTAINER_1-->
-						<div>
-							<div>
-							<img src="Car_1.jpg" alt="Chevelle">
-								<div>
-								<p>We receive new inventory everyday so contact us to view our most recent inventory</p>
-								</div>
-							</div>
-						</div>
-						<!--End PHOTO_CONTAINER_1-->
-				
-						<!--PHOTO_CONTAINER_2-->
-						<div>
-							<div>
-							<img src="Car_2.jpg" alt="Mustang">
-								<div>
-								<p>We receive new inventory everyday so contact us to view our most recent inventory</p>
-								</div>
-							</div>
-						</div>
-						<!--End PHOTO_CONTAINER_2-->
-				
-						<!--PHOTO_CONTAINER_3-->
-						<div>
-							<div>
-							<img src="Car_3.jpg" alt="Charger">
-								<div>
-								<p>We receive new inventory everyday so contact us to view our most recent inventory</p>
-								</div>
-							</div>
-						</div>
-						<!--End PHOTO_CONTAINER_3-->
-				
-						<!--PHOTO_CONTAINER_4-->
-						<div>
-							<div>
-							<img src="Car_4.jpg" alt="Challenger">
-								<div>
-								<p>We receive new inventory everyday so contact us to view our most recent inventory</p>
-								</div>
-							</div>
-						</div>
-						<!--End PHOTO_CONTAINER_4-->
-					</div>
-				</div>
+		<!-- Images used to open the lightbox -->
+		<div class="row">
+			<div class="holder">
+			  <img src="./Pictures/Car_1 - Copy.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Chevelle">
 			</div>
-		</section>
+			<div class="holder">
+			  <img src="./Pictures/Car_2 - Copy.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Mustang">
+			</div>
+			<div class="holder">
+			  <img src="./Pictures/Car_3 - Copy.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Charger">
+			</div>
+			<div class="holder">
+			  <img src="./Pictures/car_4 - Copy.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="Challenger">
+			</div>
+		  </div>
+		  
+		  <!-- The Modal/Lightbox -->
+		  <div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			<div class="modal-content">
+		  
+			  <div class="main_Pic">
+				<div class="numbertext">1 / 4</div>
+				<img src="./Pictures/Car_1.jpg" style="width:100%" alt="Chevelle">
+			  </div>
+		  
+			  <div class="main_Pic">
+				<div class="numbertext">2 / 4</div>
+				<img src="./Pictures/Car_2.jpg" style="width:100%" alt="Mustang">
+			  </div>
+		  
+			  <div class="main_Pic">
+				<div class="numbertext">3 / 4</div>
+				<img src="./Pictures/Car_3.jpg" style="width:100%" alt="Charger">
+			  </div>
+		  
+			  <div class="main_Pic">
+				<div class="numbertext">4 / 4</div>
+				<img src="./Pictures/car_4.jpg" style="width:100%" alt="Challenger">
+			  </div>
+		  
+			  <!-- Next/previous controls -->
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+			  <!-- Caption text -->
+			  <div class="description-container">
+				<p id="description"></p>
+			  </div>
+		  
+			  <!-- Thumbnail image controls -->
+			  <div class="holder">
+				<img class="Thumb" src="./Pictures/Car_1 - Copy - Copy.jpg" onclick="currentSlide(1)" alt="Chevelle">
+			  </div>
+		  
+			  <div class="holder">
+				<img class="Thumb" src="./Pictures/Car_2 - Copy - Copy.jpg" onclick="currentSlide(2)" alt="Mustang">
+			  </div>
+		  
+			  <div class="holder">
+				<img class="Thumb" src="./Pictures/Car_3 - Copy - Copy.jpg" onclick="currentSlide(3)" alt="Charger">
+			  </div>
+		  
+			  <div class="holder">
+				<img class="Thumb" src="./Pictures/car_4 - Copy - Copy.jpg" onclick="currentSlide(4)" alt="Challenger">
+			  </div>
+			</div>
+		</div>
 		<!--END GALLERY-->
 
 		<!--INQUIRIES-->
@@ -123,6 +140,7 @@
 			</div>
 		</div>
 		<!--END VIDEOS-->
+		</div>
 		
 		<footer>
 		<!--NAV-->
@@ -136,4 +154,3 @@
 	</body>
 </html>
 					
-				
